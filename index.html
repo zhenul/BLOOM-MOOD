@@ -174,7 +174,7 @@
         }
 
         .services-grid-wrapper {
-            max-width: 800px; /* Օպտիմալացված նեղ լայնություն՝ առանց նկարների գեղեցիկ տեսքի համար */
+            max-width: 800px;
             margin: 0 auto;
         }
 
@@ -226,51 +226,48 @@
         }
 
         .courses-grid {
-            display: flex;
-            justify-content: center; /* Կենտրոնացնում է միակ քարտը էջում */
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .course-card {
             background-color: var(--white);
-            padding: 40px;
+            padding: 35px;
             border-top: 4px solid var(--dusty-pink);
             box-shadow: 0 15px 40px rgba(0,0,0,0.03);
             text-align: left;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            max-width: 450px; /* Սահմանափակված է լավագույն տեսքի համար */
-            width: 100%;
         }
 
         .course-book-image {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .course-book-image img {
             width: 100%;
-            max-width: 220px;
+            max-width: 180px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.08);
             border-radius: 4px;
         }
 
         .course-info h3 {
-            font-size: 20px;
+            font-size: 19px;
             text-transform: uppercase;
             margin-bottom: 15px;
             letter-spacing: 1.5px;
-            text-align: center;
         }
 
         .course-info p {
             font-size: 14px;
             color: #6E605F;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             line-height: 1.6;
-            text-align: center;
         }
 
         footer {
@@ -289,10 +286,15 @@
             opacity: 0.9;
         }
 
+        @media (max-width: 1024px) {
+            .courses-grid { grid-template-columns: 1fr 1fr; }
+        }
+
         @media (max-width: 768px) {
             header { flex-direction: column; gap: 15px; }
             .hero { flex-direction: column; text-align: center; }
             .hero-text { padding-right: 0; margin-bottom: 40px; }
+            .courses-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -300,7 +302,7 @@
 
     <header>
         <div class="header-logo">
-            <img src="logo.png" alt="Bloom Mood Logo">
+            <img src="1.jpg" alt="Bloom Mood Logo">
         </div>
         <nav>
             <a href="#about">Սրահի Մասին</a>
@@ -316,8 +318,7 @@
             <a href="register.html" class="btn-main">Ամրագրել Օնլայն</a>
         </div>
         <div class="hero-image-container">
-            <img src="salon.png" class="main-salon-img" alt="Bloom Mood Studio">
-            <img src="flower.png" class="hero-flower-deco" alt="Deco Flower">
+            <img src="2.jpg" class="main-salon-img" alt="Bloom Mood Studio">
         </div>
     </section>
 
@@ -478,7 +479,7 @@
             
             <div class="course-card">
                 <div class="course-book-image">
-                    <img src="course-book.png" alt="Makeup Course">
+                    <img src="02BC1A67-0A15-4BA7-8B9A-68D1027CC21B.JPG" alt="Makeup Course">
                 </div>
                 <div class="course-info">
                     <h3>Basic Makeup Course</h3>
@@ -487,30 +488,11 @@
                 </div>
             </div>
 
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-logo">
-            <img src="logo.png" alt="Bloom Mood Logo">
-        </div>
-        <p>&copy; 2026 Bloom Mood by Zhenka. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-            document.getElementById(tabName).style.display = "block"; /* Փոխված է block-ի՝ նոր կառուցվածքի համաչափության համար */
-            evt.currentTarget.classList.add("active");
-        }
-    </script>
-</body>
-</html>
+            <div class="course-card">
+                <div class="course-book-image">
+                    <img src="02BC1A67-0A15-4BA7-8B9A-68D1027CC21B.JPG" alt="Hair Course">
+                </div>
+                <div class="course-info">
+                    <h3>Hair Styling Course</h3>
+                    <p>Պրոֆեսիոնալ վարսահարդարման և սանրվածքների դասընթաց սկսնակների համար: Երեկոյան, հարսանեկան ոճերի կերտում և գործնական աշխատանք մոդելների հետ:</p>
+                    <a href="register.html" class="btn-main" style="background-color: var(--accent-gold);
