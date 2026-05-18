@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ամրագրում | Bloom Mood</title>
+    <style>
+        body {
+            background-color: #F7F4EE;
+            color: #4A3E3D;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            width: 100%;
+            max-width: 450px;
+        }
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(197, 168, 128, 0.5);
+            background-color: #FFFDF9;
+            color: #4A3E3D;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #C5A880;
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background-color: #4A3E3D;
+            color: white;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        .btn-submit:hover {
+            background-color: #C5A880;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #C5A880;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Օնլայն Ամրագրում</h2>
+        
+        <form onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="name">Անուն Ազգանուն</label>
+                <input type="text" id="name" required placeholder="Մարիամ Գրիգորյան">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Հեռախոսահամար</label>
+                <input type="tel" id="phone" required placeholder="+374 99 000000">
+            </div>
+
+            <div class="form-group">
+                <label for="service">Ընտրել Ծառայությունը</label>
+                <select id="service">
+                    <option value="cosmetology">Ոչ ներարկումային կոսմետոլոգիա</option>
+                    <option value="injectable">Ներարկումային կոսմետոլոգիա</option>
+                    <option value="hair">Վարսահարդարում</option>
+                    <option value="makeup">Դիմահարդարում</option>
+                    <option value="nails">Մատնահարդարում / Ոտնահարդարում</option>
+                    <option value="course">Ուսումնական դասընթաց</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Նախընտրելի Օր և Ժամ</label>
+                <input type="datetime-local" id="date" required>
+            </div>
+
+            <button type="submit" class="btn-submit">Հաստատել Ամրագրումը</button>
+        </form>
+
+        <a href="index.html" class="back-link">⬅ Վերադառնալ Գլխավոր Էջ</a>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert("Շնորհակալություն։ Ձեր հայտը հաջողությամբ գրանցվեց։ Մենք կապ կհաստատենք Ձեզ հետ։");
+            window.location.href = "index.html"; // Հետ է տանում գլխավոր էջ
+        }
+    </script>
+
+</body>
+</html>
