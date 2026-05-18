@@ -174,14 +174,14 @@
         }
 
         .services-grid-wrapper {
-            max-width: 1100px;
+            max-width: 800px; /* Փոխվեց 800px, քանի որ նկարների սյունակը հանվեց և տեքստը պետք է կենտրոնացված լինի */
             margin: 0 auto;
         }
 
         .tab-content {
             display: none;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 50px;
+            grid-template-columns: 1fr; /* Դարձավ 1 սյունակ, քանի որ նկարները չկան */
+            gap: 30px;
             align-items: start;
         }
 
@@ -220,26 +220,6 @@
             font-weight: bold;
             white-space: nowrap;
             margin-left: 10px;
-        }
-
-        .price-images-column {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .service-price-page-display {
-            background-color: var(--bg-color);
-            padding: 15px;
-            border: 1px solid rgba(197, 168, 128, 0.2);
-            text-align: center;
-        }
-
-        .service-price-page-display img {
-            width: 100%;
-            max-height: 450px;
-            object-fit: contain;
-            display: block;
         }
 
         .courses-section {
@@ -311,10 +291,6 @@
             .courses-grid { grid-template-columns: 1fr 1fr; }
         }
 
-        @media (max-width: 950px) {
-            .tab-content.active { grid-template-columns: 1fr; }
-        }
-
         @media (max-width: 768px) {
             header { flex-direction: column; gap: 15px; }
             .hero { flex-direction: column; text-align: center; }
@@ -381,9 +357,6 @@
                     <div class="service-item"><span class="service-name">Շերտաներկում</span><span class="service-price">25,000 / 30,000 AMD</span></div>
                     <div class="service-item"><span class="service-name">Կտրվածք</span><span class="service-price">2,000 AMD</span></div>
                 </div>
-                <div class="service-price-page-display">
-                    <img src="PRICE-HAIR.jpg" alt="Makeup and Hair Prices">
-                </div>
             </div>
 
             <div id="nails" class="tab-content">
@@ -403,9 +376,6 @@
                     <div class="service-item"><span class="service-name">Ոտնահարդարում թաթային + գելլաք</span><span class="service-price">5,000 AMD</span></div>
                     <div class="service-item"><span class="service-name">Ոտնահարդարում կրունկներով + գելլաք</span><span class="service-price">7,000 AMD</span></div>
                 </div>
-                <div class="service-price-page-display">
-                    <img src="PRICE-NAILS.jpg" alt="Nails Prices">
-                </div>
             </div>
 
             <div id="cosmetology-inject" class="tab-content">
@@ -424,9 +394,6 @@
                     <div class="service-item"><span class="service-name">Դեմք 1մլ</span><span class="service-price">10,000 / 15,000 AMD</span></div>
                     <div class="service-item"><span class="service-name">Գլխամաշկ 1մլ</span><span class="service-price">6,000 / 8,000 AMD</span></div>
                     <div class="service-item"><span class="service-name">Լիպոլիտիկներ 1մլ</span><span class="service-price">6,000 / 8,000 AMD</span></div>
-                </div>
-                <div class="service-price-page-display">
-                    <img src="PRICE-COSMO2.jpg" alt="Injections Prices">
                 </div>
             </div>
 
@@ -449,10 +416,6 @@
                     <div class="service-item"><span class="service-name">Կավ յուղոտ մաշկի (ճարպային բալանսի կարգավորում)</span><span class="service-price">3,000 AMD</span></div>
                     <div class="service-item"><span class="service-name">Քունջութի դիմակ չոր մաշկի համար (խորը խոնավեցում)</span><span class="service-price">3,000 AMD</span></div>
                     <div class="service-item"><span class="service-name">Մաշկը հանգստացնող տարբեր դիմակներ</span><span class="service-price">3,000 AMD</span></div>
-                </div>
-                <div class="price-images-column">
-                    <div class="service-price-page-display"><img src="PRICE-COSMO1.jpg" alt="Cosmetology Care Prices"></div>
-                    <div class="service-price-page-display"><img src="PRICE-MASKS.jpg" alt="Masks Prices"></div>
                 </div>
             </div>
 
@@ -478,9 +441,6 @@
                     <div class="service-item"><span class="service-name">Հոնքերի լամինացիա</span><span class="service-price">7,000 AMD</span></div>
                     <div class="service-item"><span class="service-name">Թարթիչների լամինացիա</span><span class="service-price">7,000 AMD</span></div>
                 </div>
-                <div class="service-price-page-display">
-                    <img src="PRICE-LASHES.jpg" alt="Lashes and Permanent Prices">
-                </div>
             </div>
 
             <div id="massage-depil" class="tab-content">
@@ -505,9 +465,6 @@
                     <div class="service-item"><span class="service-name">Թևատակեր / Ձեռքեր</span><span class="service-price">2,000 / 6,000 AMD</span></div>
                     <div class="service-item"><span class="service-name">Ոտքեր / Մարմին (Ամբողջական)</span><span class="service-price">8,000 / 20,000 AMD</span></div>
                     <div class="service-item"><span class="service-name">Բիկինի / Նստատեղ</span><span class="service-price">6,000 / 3,000 AMD</span></div>
-                </div>
-                <div class="service-price-page-display">
-                    <img src="PRICE-MASSAGE.jpg" alt="Massage Prices">
                 </div>
             </div>
 
