@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLOOM MOOD by Zhenka</title>
     <style>
+        /* Նախկին շքեղ ու մութ դիզայնի բոլոր սթայլերը */
         * {
             margin: 0;
             padding: 0;
@@ -13,8 +14,8 @@
 
         body {
             font-family: 'Times New Roman', Times, serif;
-            background-color: #ffffff;
-            color: #111111;
+            background-color: #0b0b0b; /* Սև/մութ շքեղ ֆոն */
+            color: #f1f1f1;
             line-height: 1.6;
             letter-spacing: 1px;
             padding-bottom: 60px;
@@ -26,87 +27,88 @@
             padding: 0 20px;
         }
 
-        /* HERO / LOGO SECTION - 1.JPG */
-        .hero-section {
-            padding: 60px 0 40px 0;
+        /* LOGO SECTION - 1.JPG */
+        .header-logo-section {
+            padding: 50px 0 30px 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             text-align: center;
-            background-color: #ffffff;
         }
 
-        .logo-container {
-            width: 180px;
+        .logo-box {
+            width: 160px;
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
-        .logo-container img {
+        .logo-box img {
             width: 100%;
             height: auto;
             display: block;
             object-fit: contain;
         }
 
-        .hero-content h1 {
-            font-size: 2.5rem;
+        .brand-title {
+            font-size: 2.6rem;
             font-weight: 300;
-            letter-spacing: 8px;
+            letter-spacing: 7px;
+            color: #d4af37; /* Ոսկեգույն */
             margin-bottom: 5px;
-            color: #111111;
-        }
-
-        .hero-content .subtitle {
-            font-size: 0.9rem;
-            letter-spacing: 5px;
-            color: #666666;
             text-transform: uppercase;
         }
 
-        /* MAIN AMBIENT / INTERIOR BANNER - 2.JPG */
-        .main-banner {
-            width: 100%;
-            margin-bottom: 60px;
-            overflow: hidden;
+        .brand-subtitle {
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            color: #aaaaaa;
+            text-transform: uppercase;
         }
 
-        .main-banner img {
+        /* MAIN SALON INTERIOR BANNER - 2.JPG */
+        .main-interior-banner {
+            width: 100%;
+            margin-bottom: 50px;
+            border-top: 1px solid #333333;
+            border-bottom: 1px solid #333333;
+            padding: 10px 0;
+        }
+
+        .main-interior-banner img {
             width: 100%;
             height: auto;
             display: block;
             object-fit: cover;
         }
 
-        /* FLOWER ELEMENT ACCENT - 3.JPG */
-        .flower-accent {
-            width: 60px;
-            margin: 40px auto;
+        /* FLOWER ACCENT BETWEEN SECTIONS - 3.JPG */
+        .flower-divider {
+            width: 50px;
+            margin: 45px auto;
             text-align: center;
             opacity: 0.8;
         }
 
-        .flower-accent img {
+        .flower-divider img {
             width: 100%;
             height: auto;
             display: block;
         }
 
-        /* SECTIONS */
+        /* MENU SECTIONS */
         .menu-section {
-            margin-bottom: 70px;
+            margin-bottom: 60px;
         }
 
         .menu-section h2 {
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             font-weight: 400;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             text-align: center;
             margin-bottom: 35px;
             text-transform: uppercase;
+            color: #d4af37; /* Ոսկեգույն */
             position: relative;
-            color: #111111;
         }
 
         .menu-section h2::after {
@@ -115,15 +117,15 @@
             bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 35px;
+            width: 40px;
             height: 1px;
-            background-color: #222222;
+            background-color: #d4af37;
         }
 
         .section-desc {
             text-align: center;
             font-style: italic;
-            color: #666666;
+            color: #888888;
             margin-bottom: 30px;
             font-size: 0.95rem;
         }
@@ -131,21 +133,21 @@
         .menu-items {
             display: flex;
             flex-direction: column;
-            gap: 22px;
+            gap: 20px;
         }
 
         .menu-item {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            border-bottom: 1px dashed #cccccc;
+            border-bottom: 1px solid #222222;
             padding-bottom: 12px;
         }
 
         .item-name {
             font-size: 1.05rem;
-            font-weight: 500;
-            color: #111111;
+            font-weight: 400;
+            color: #f1f1f1;
         }
 
         .item-details {
@@ -156,40 +158,39 @@
 
         .item-sub {
             font-size: 0.85rem;
-            color: #666666;
+            color: #888888;
             margin-top: 5px;
-            font-family: 'Times New Roman', Times, serif;
             font-style: italic;
         }
 
         .item-price {
             font-size: 1.05rem;
             font-weight: 400;
+            color: #d4af37; /* Ոսկեգույն գներ */
             white-space: nowrap;
-            color: #111111;
             padding-left: 10px;
         }
 
-        /* COURSES */
+        /* COURSES CARD */
         .course-card {
-            background-color: #fafafa;
-            padding: 35px;
+            background-color: #111111;
+            padding: 30px;
             text-align: center;
-            border: 1px solid #eaeaea;
+            border: 1px solid #222222;
         }
 
         .course-card h3 {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 400;
             letter-spacing: 2px;
-            margin-bottom: 15px;
-            color: #111111;
+            margin-bottom: 12px;
+            color: #d4af37;
         }
 
         .course-details {
             margin-top: 10px;
-            font-size: 0.95rem;
-            color: #444444;
+            font-size: 0.9rem;
+            color: #aaaaaa;
         }
 
         /* FOOTER */
@@ -198,39 +199,37 @@
             padding: 40px 0;
             font-size: 0.75rem;
             letter-spacing: 2px;
-            color: #888888;
-            border-top: 1px solid #eaeaea;
-            margin-top: 80px;
+            color: #555555;
+            border-top: 1px solid #222222;
+            margin-top: 60px;
         }
 
         @media (max-width: 600px) {
-            .hero-content h1 {
+            .brand-title {
                 font-size: 2rem;
             }
             .item-name, .item-price {
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
-            .logo-container {
-                width: 140px;
+            .logo-box {
+                width: 130px;
             }
         }
     </style>
 </head>
 <body>
 
-    <header class="hero-section">
-        <div class="logo-container">
+    <header class="header-logo-section">
+        <div class="logo-box">
             <img src="1.JPG" alt="BLOOM MOOD Logo">
         </div>
-        <div class="hero-content">
-            <h1>BLOOM MOOD</h1>
-            <p class="subtitle">BY ZHENKA</p>
-        </div>
+        <h1 class="brand-title">BLOOM MOOD</h1>
+        <p class="brand-subtitle">BY ZHENKA</p>
     </header>
 
-    <div class="main-banner">
+    <div class="main-interior-banner">
         <div class="container">
-            <img src="2.JPG" alt="BLOOM MOOD Salon Interior">
+            <img src="2.JPG" alt="BLOOM MOOD Interior Style">
         </div>
     </div>
 
@@ -262,8 +261,8 @@
             </div>
         </section>
 
-        <div class="flower-accent">
-            <img src="3.JPG" alt="Flower Accent">
+        <div class="flower-divider">
+            <img src="3.JPG" alt="Flower Ornament">
         </div>
 
         <section class="menu-section">
@@ -288,8 +287,8 @@
             </div>
         </section>
 
-        <div class="flower-accent">
-            <img src="3.JPG" alt="Flower Accent">
+        <div class="flower-divider">
+            <img src="3.JPG" alt="Flower Ornament">
         </div>
 
         <section class="menu-section">
@@ -318,8 +317,8 @@
             </div>
         </section>
 
-        <div class="flower-accent">
-            <img src="3.JPG" alt="Flower Accent">
+        <div class="flower-divider">
+            <img src="3.JPG" alt="Flower Ornament">
         </div>
 
         <section class="menu-section">
@@ -371,8 +370,8 @@
             </div>
         </section>
 
-        <div class="flower-accent">
-            <img src="3.JPG" alt="Flower Accent">
+        <div class="flower-divider">
+            <img src="3.JPG" alt="Flower Ornament">
         </div>
 
         <section class="menu-section">
