@@ -3,391 +3,438 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOOM MOOD by Zhenka</title>
+    <title>Bloom Mood by Zhenka | Styling Studio</title>
     <style>
-        /* Նախկին շքեղ ու մութ դիզայնի բոլոր սթայլերը */
+        /* ԲՐԵՆԴԱՅԻՆ ԳՈՒՅՆԵՐ (Warm Beige, Dusty Pink, Gold) */
+        :root {
+            --bg-color: #F7F4EE;      
+            --text-main: #4A3E3D;     
+            --accent-gold: #C5A880;   
+            --dusty-pink: #D19A92;    
+            --white: #ffffff;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: 0.5px;
         }
 
         body {
-            font-family: 'Times New Roman', Times, serif;
-            background-color: #0b0b0b; /* Սև/մութ շքեղ ֆոն */
-            color: #f1f1f1;
-            line-height: 1.6;
-            letter-spacing: 1px;
-            padding-bottom: 60px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* LOGO SECTION - 1.JPG */
-        .header-logo-section {
-            padding: 50px 0 30px 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .logo-box {
-            width: 160px;
-            height: auto;
-            margin-bottom: 15px;
-        }
-
-        .logo-box img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: contain;
-        }
-
-        .brand-title {
-            font-size: 2.6rem;
-            font-weight: 300;
-            letter-spacing: 7px;
-            color: #d4af37; /* Ոսկեգույն */
-            margin-bottom: 5px;
-            text-transform: uppercase;
-        }
-
-        .brand-subtitle {
-            font-size: 0.9rem;
-            letter-spacing: 4px;
-            color: #aaaaaa;
-            text-transform: uppercase;
-        }
-
-        /* MAIN SALON INTERIOR BANNER - 2.JPG */
-        .main-interior-banner {
-            width: 100%;
-            margin-bottom: 50px;
-            border-top: 1px solid #333333;
-            border-bottom: 1px solid #333333;
-            padding: 10px 0;
-        }
-
-        .main-interior-banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-        }
-
-        /* FLOWER ACCENT BETWEEN SECTIONS - 3.JPG */
-        .flower-divider {
-            width: 50px;
-            margin: 45px auto;
-            text-align: center;
-            opacity: 0.8;
-        }
-
-        .flower-divider img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* MENU SECTIONS */
-        .menu-section {
-            margin-bottom: 60px;
-        }
-
-        .menu-section h2 {
-            font-size: 1.35rem;
-            font-weight: 400;
-            letter-spacing: 3px;
-            text-align: center;
-            margin-bottom: 35px;
-            text-transform: uppercase;
-            color: #d4af37; /* Ոսկեգույն */
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
             position: relative;
         }
 
-        .menu-section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 1px;
-            background-color: #d4af37;
+        /* ՏԵՐԵՎԻ ՍՏՎԵՐԱՅԻՆ ՖՈՆԻ ԷՖԵԿՏ (LEAF SHADOW OVERLAY) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Պրոֆեսիոնալ տերևների ստվերի էֆեկտ CSS-ով՝ թեթև խոնավ ու բնական տեսքի համար */
+            background-image: 
+                radial-gradient(circle at 80% 20%, rgba(74, 62, 61, 0.04) 0%, transparent 40%),
+                radial-gradient(circle at 15% 60%, rgba(74, 62, 61, 0.03) 0%, transparent 35%),
+                linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(74, 62, 61, 0.02) 50%, rgba(0,0,0,0) 100%);
+            pointer-events: none; /* Թույլ է տալիս սեղմել կոճակները առանց խնդրի */
+            z-index: 999;
         }
 
-        .section-desc {
-            text-align: center;
-            font-style: italic;
-            color: #888888;
-            margin-bottom: 30px;
-            font-size: 0.95rem;
-        }
-
-        .menu-items {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .menu-item {
+        /* HEADER & NAVIGATION */
+        header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            border-bottom: 1px solid #222222;
-            padding-bottom: 12px;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: rgba(247, 244, 238, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(197, 168, 128, 0.2);
         }
 
-        .item-name {
-            font-size: 1.05rem;
-            font-weight: 400;
-            color: #f1f1f1;
+        .header-logo img {
+            height: 60px; 
+            display: block;
         }
 
-        .item-details {
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 13px;
+            text-transform: uppercase;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 80px 8%;
             display: flex;
-            flex-direction: column;
-            max-width: 75%;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 80vh;
         }
 
-        .item-sub {
-            font-size: 0.85rem;
-            color: #888888;
-            margin-top: 5px;
-            font-style: italic;
+        .hero-text {
+            flex: 1;
+            padding-right: 50px;
         }
 
-        .item-price {
-            font-size: 1.05rem;
-            font-weight: 400;
-            color: #d4af37; /* Ոսկեգույն գներ */
-            white-space: nowrap;
-            padding-left: 10px;
+        .hero-text h2 {
+            font-size: 42px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            line-height: 1.2;
         }
 
-        /* COURSES CARD */
-        .course-card {
-            background-color: #111111;
-            padding: 30px;
-            text-align: center;
-            border: 1px solid #222222;
+        .hero-text p {
+            font-size: 17px;
+            margin-bottom: 35px;
+            color: #6E605F;
         }
 
-        .course-card h3 {
-            font-size: 1.2rem;
-            font-weight: 400;
+        .hero-image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 2.JPG - ՍՐԱՀԻ ՀԻՄՆԱԿԱՆ ՆԿԱՐԸ */
+        .hero-image-container img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 200px 200px 0 0; 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+            border: 12px solid var(--white);
+            object-fit: cover;
+        }
+
+        /* BUTTONS */
+        .btn-main {
+            display: inline-block;
+            padding: 16px 40px;
+            background-color: var(--text-main);
+            color: var(--white);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 13px;
             letter-spacing: 2px;
-            margin-bottom: 12px;
-            color: #d4af37;
+            border: 1px solid var(--text-main);
+            transition: all 0.3s ease;
+            font-weight: bold;
+            position: relative;
+            z-index: 1001;
         }
 
-        .course-details {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: #aaaaaa;
+        .btn-main:hover {
+            background-color: transparent;
+            color: var(--text-main);
+        }
+
+        /* SERVICES SECTION WITH TAB SYSTEM */
+        .services-section {
+            padding: 100px 8%;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 40px;
+        }
+
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 12px 25px;
+            background: none;
+            border: 1px solid rgba(197, 168, 128, 0.3);
+            color: var(--text-main);
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background-color: var(--accent-gold);
+            color: var(--white);
+            border-color: var(--accent-gold);
+        }
+
+        .services-grid-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tab-content {
+            display: none;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .tab-content.active {
+            display: grid;
+        }
+
+        .service-items-list {
+            padding-right: 20px;
+        }
+
+        .service-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 22px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed rgba(197, 168, 128, 0.4);
+        }
+
+        .service-name {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .service-price {
+            font-size: 16px;
+            color: var(--accent-gold);
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        /* 3.JPG - ԾԱՂԿԻ ՆԿԱՐԸ ԳՆԱՑՈՒՑԱԿԻ ԱՋ ԿՈՂՄՈՒՄ */
+        .service-price-page-display {
+            background-color: var(--bg-color);
+            padding: 15px;
+            border: 1px solid rgba(197, 168, 128, 0.2);
+            text-align: center;
+        }
+
+        .service-price-page-display img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* COURSES SECTION */
+        .courses-section {
+            padding: 100px 8%;
+            text-align: center;
+            background-color: var(--bg-color);
+        }
+
+        .course-card {
+            background-color: var(--white);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            border-left: 5px solid var(--dusty-pink);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.03);
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            align-items: center;
+            text-align: left;
+        }
+
+        /* 3.JPG - ԾԱՂԿԻ ՆԿԱՐԸ ՆԱԵՎ ԴԱՍԸՆԹԱՑՆԵՐԻ ԲԱԺՆՈՒՄ */
+        .course-book-image img {
+            width: 100%;
+            max-width: 220px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .course-info h3 {
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
         }
 
         /* FOOTER */
         footer {
+            background-color: var(--text-main);
+            color: var(--bg-color);
             text-align: center;
-            padding: 40px 0;
-            font-size: 0.75rem;
+            padding: 60px 20px;
+            font-size: 13px;
             letter-spacing: 2px;
-            color: #555555;
-            border-top: 1px solid #222222;
-            margin-top: 60px;
+            text-transform: uppercase;
         }
 
-        @media (max-width: 600px) {
-            .brand-title {
-                font-size: 2rem;
-            }
-            .item-name, .item-price {
-                font-size: 0.95rem;
-            }
-            .logo-box {
-                width: 130px;
-            }
+        .footer-logo img {
+            height: 70px;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 900px) {
+            .tab-content.active { grid-template-columns: 1fr; }
+            .course-card { grid-template-columns: 1fr; text-align: center; }
+            .service-price-page-display { display: none; } /* Թաքցնել աջ կողմի նկարը փոքր էկրանների վրա */
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            .hero { flex-direction: column; text-align: center; }
+            .hero-text { padding-right: 0; margin-bottom: 40px; }
         }
     </style>
 </head>
 <body>
 
-    <header class="header-logo-section">
-        <div class="logo-box">
-            <img src="1.JPG" alt="BLOOM MOOD Logo">
+    <header>
+        <div class="header-logo">
+            <img src="1.JPG" alt="Bloom Mood Logo">
         </div>
-        <h1 class="brand-title">BLOOM MOOD</h1>
-        <p class="brand-subtitle">BY ZHENKA</p>
+        <nav>
+            <a href="#about">Սրահի Մասին</a>
+            <a href="#services">Գնացուցակ</a>
+            <a href="#courses">Դասընթացներ</a>
+        </nav>
     </header>
 
-    <div class="main-interior-banner">
-        <div class="container">
-            <img src="2.JPG" alt="BLOOM MOOD Interior Style">
+    <section class="hero" id="about">
+        <div class="hero-text">
+            <h2>Ընդգծի՛ր քո բնական գեղեցկությունը</h2>
+            <p>Բարի գալուստ Bloom Mood Styling Studio: Մեզ մոտ ստեղծված է կատարյալ հարմարավետություն, շքեղ մթնոլորտ և պրոֆեսիոնալ մոտեցում՝ Ձեր խնամքն ու անդիմադրելի տեսքը ապահովելու համար:</p>
+            <a href="https://gidup.am" target="_blank" class="btn-main">Ամրագրել Օնլայն</a>
         </div>
-    </div>
+        <div class="hero-image-container">
+            <img src="2.JPG" alt="Bloom Mood Studio">
+        </div>
+    </section>
 
-    <main class="container">
+    <section class="services-section" id="services">
+        <h2 class="section-title">Ծառայություններ և Արժեքներ</h2>
 
-        <section class="menu-section">
-            <h2>PERMANENT MAKE UP & MAKE UP</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <span class="item-name">Հոնքերի փոշեդրում</span>
-                    <span class="item-price">25.000 AMD</span>
-                </div>
-                <div class="menu-item">
-                    <span class="item-name">Շուրթերի փոշեդրում</span>
-                    <span class="item-price">25.000 AMD</span>
-                </div>
-                <div class="menu-item">
-                    <span class="item-name">Աչքերի սլաք (Լայներ)</span>
-                    <span class="item-price">25.000 AMD</span>
-                </div>
-                <div class="menu-item">
-                    <span class="item-name">Միջթարթիչային տարածություն</span>
-                    <span class="item-price">15.000 AMD</span>
-                </div>
-                <div class="menu-item">
-                    <span class="item-name">Կորեկցիա</span>
-                    <span class="item-price">10.000 AMD</span>
-                </div>
-            </div>
-        </section>
-
-        <div class="flower-divider">
-            <img src="3.JPG" alt="Flower Ornament">
+        <div class="tabs-container">
+            <button class="tab-btn active" onclick="openTab(event, 'cosmetology')">Կոսմետոլոգիա</button>
+            <button class="tab-btn" onclick="openTab(event, 'hair')">Վարսահարդարում</button>
+            <button class="tab-btn" onclick="openTab(event, 'makeup')">Դիմահարդարում</button>
+            <button class="tab-btn" onclick="openTab(event, 'nails')">Մատնահարդարում</button>
         </div>
 
-        <section class="menu-section">
-            <h2>MAKE UP SERVICES</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <span class="item-name">Ցերեկային դիմահարդարում</span>
-                    <span class="item-price">8.000 AMD</span>
+        <div class="services-grid-wrapper">
+            
+            <div id="cosmetology" class="tab-content active">
+                <div class="service-items-list">
+                    <div class="service-item"><span class="service-name">Քիմիական պիլինգներ</span><span class="service-price">15,000 AMD</span></div>
+                    <div class="service-item"><span class="service-name">Ֆրակցիոն մեզոթերապիա</span><span class="service-price">12,000 AMD</span></div>
+                    <div class="service-item"><span class="service-name">Կարբոքսի թերապիա</span><span class="service-price">12,000 AMD</span></div>
+                    <div class="service-item"><span class="service-name">Ուլտրաձայնային մաքրում</span><span class="service-price">10,000 AMD</span></div>
+                    <div class="service-item"><span class="service-name">Ֆիլերներ</span><span class="service-price">սկսած 25,000 AMD</span></div>
                 </div>
-                <div class="menu-item">
-                    <span class="item-name">Երեկոյան դիմահարդարում</span>
-                    <span class="item-price">10.000 AMD</span>
-                </div>
-                <div class="menu-item">
-                    <span class="item-name">Հարսանեկան դիմահարդարում</span>
-                    <span class="item-price">20.000 AMD</span>
-                </div>
-                <div class="menu-item">
-                    <span class="item-name">Դեկոլտեի մշակում</span>
-                    <span class="item-price">5.000 AMD</span>
+                <div class="service-price-page-display">
+                    <img src="3.JPG" alt="Cosmetology Display">
                 </div>
             </div>
-        </section>
 
-        <div class="flower-divider">
-            <img src="3.JPG" alt="Flower Ornament">
+            <div id="hair" class="tab-content">
+                <div class="service-items-list">
+                    <div class="service-item"><span class="service-name">Հարսանեկան սանրվածք</span><span class="service-price">8,000 - 18,000 AMD</span></div>
+                    <div class="service-item"><span class="service-name">Երեկոյան սանրվածք</span><span class="service-price">5,000 - 18,000 AMD</span></div>
+                    <div class="service-item"><span class="service-name">Հարդարում</span><span class="service-price">2,000 - 3,000 AMD</span></div>
+                </div>
+                <div class="service-price-page-display">
+                    <img src="3.JPG" alt="Hair Display">
+                </div>
+            </div>
+
+            <div id="makeup" class="tab-content">
+                <div class="service-items-list">
+                    <div class="service-item"><span class="service-name">Ցերեկային դիմահարդարում</span><span class="service-price">8,000 AMD</span></div>
+                    <div class="service-item"><span class="service-name">Երեկոյան դիմահարդարում</span><span class="service-price">10,000 AMD</span></div>
+                    <div class="service-item"><span class="service-name">Հարսանեկան դիմահարդարում</span><span class="service-price">20,000 AMD</span></div>
+                </div>
+                <div class="service-price-page-display">
+                    <img src="3.JPG" alt="Makeup Display">
+                </div>
+            </div>
+
+            <div id="nails" class="tab-content">
+                <div class="service-items-list">
+                    <div class="service-item"><span class="service-name">Մատնահարդարում + Գելլաք</span><span class="service-price">3,000 AMD</span></div>
+                    <div class="service-item"><span class="service-name">Մոդելավորում (Լիցք)</span><span class="service-price">7,000 AMD</span></div>
+                </div>
+                <div class="service-price-page-display">
+                    <img src="3.JPG" alt="Nails Display">
+                </div>
+            </div>
+
         </div>
 
-        <section class="menu-section">
-            <h2>LASHES & BROWS</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <span class="item-name">Անկյունային լիցք</span>
-                    <span class="item-price">4.000 AMD</span>
-                </div>
-                <div class="menu-item">
-                    <span class="item-name">2D Լիցք</span>
-                    <span class="item-price">6.000 AMD</span>
-                </div>
-                <div class="menu-item">
-                    <span class="item-name">3D Լիցք</span>
-                    <span class="item-price">7.000 AMD</span>
-                </div>
-                <div class="menu-item">
-                    <span class="item-name">2D - 3D Միքս</span>
-                    <span class="item-price">8.000 AMD</span>
-                </div>
-                <div class="menu-item">
-                    <span class="item-name">Mega Volume</span>
-                    <span class="item-price">10.000 AMD</span>
-                </div>
-            </div>
-        </section>
-
-        <div class="flower-divider">
-            <img src="3.JPG" alt="Flower Ornament">
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="https://gidup.am" target="_blank" class="btn-main">Ընտրել Օր և Ժամ Gidup-ում</a>
         </div>
+    </section>
 
-        <section class="menu-section">
-            <h2>COSMETOLOGY & SKINCARE</h2>
-            <p class="section-desc">Premium դիմակներ մաշկի խնամքի և վերականգնման համար</p>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <div class="item-details">
-                        <span class="item-name">Ալգինատե դիմակ</span>
-                        <span class="item-sub">վերականգնող, ծակոտիները փակող, ապաքինող, մաշկը հարթեցնող</span>
-                    </div>
-                    <span class="item-price">6.000 AMD</span>
-                </div>
-                <div class="menu-item">
-                    <div class="item-details">
-                        <span class="item-name">Ոսկու դիմակ</span>
-                        <span class="item-sub">երիտասարդեցնող ակտիվ դիմակ, կոլոիդ ոսկու փոշի, հիալուրոնաթթու</span>
-                    </div>
-                    <span class="item-price">6.000 AMD</span>
-                </div>
-                <div class="menu-item">
-                    <div class="item-details">
-                        <span class="item-name">Պղնձի դիմակ</span>
-                        <span class="item-sub">վերականգնող, թարմեցնող, երիտասարդեցնող</span>
-                    </div>
-                    <span class="item-price">5.000 AMD</span>
-                </div>
-                <div class="menu-item">
-                    <div class="item-details">
-                        <span class="item-name">Ձկնկիթով դիմակ (Caviar)</span>
-                        <span class="item-sub">լիֆտինգ, մաշկը ձգող, երիտասարդեցնող՝ առանց ներարկման</span>
-                    </div>
-                    <span class="item-price">8.000 AMD</span>
-                </div>
-                <div class="menu-item">
-                    <div class="item-details">
-                        <span class="item-name">Կավե դիմակ</span>
-                        <span class="item-sub">յուղոտ մաշկի համար՝ կարգավորում է ճարպային բալանսը</span>
-                    </div>
-                    <span class="item-price">3.000 AMD</span>
-                </div>
-                <div class="menu-item">
-                    <div class="item-details">
-                        <span class="item-name">Քունջութի դիմակ</span>
-                        <span class="item-sub">չոր մաշկի համար՝ խորը խոնավեցում և հարթեցում</span>
-                    </div>
-                    <span class="item-price">3.000 AMD</span>
-                </div>
+    <section class="courses-section" id="courses">
+        <h2 class="section-title">Ուսումնական Դասընթացներ</h2>
+        <div class="course-card">
+            <div class="course-book-image">
+                <img src="3.JPG" alt="Course Accent">
             </div>
-        </section>
-
-        <div class="flower-divider">
-            <img src="3.JPG" alt="Flower Ornament">
+            <div class="course-info">
+                <h3>Basic Makeup & Styling Course</h3>
+                <p>Տիրապետի՛ր դիմահարդարման և կոսմետոլոգիայի գաղտնիքներին: Դասընթացները ներառում են թե՛ տեսական, թե՛ գործնական փուլեր՝ հատուկ մշակված մեթոդիկայով և Zhenka-ի անհատական ձեռագրով:</p>
+                <a href="https://gidup.am" target="_blank" class="btn-main" style="background-color: var(--dusty-pink); border-color: var(--dusty-pink);">Գրանցվել</a>
+            </div>
         </div>
-
-        <section class="menu-section">
-            <h2>MAKE UP COURSES</h2>
-            <div class="course-card">
-                <h3>Professional Make Up Course</h3>
-                <p>Մասնագիտացված դիմահարդարման դասընթաց:</p>
-                <p class="course-details">Ներառում է՝ աշխատանքային էթիկա, գործիքների ստերիլիզացիա, կոսմետիկայի ճիշտ կիրառում և գործնական փուլեր:</p>
-            </div>
-        </section>
-
-    </main>
+    </section>
 
     <footer>
-        <p>&copy; 2026 BLOOM MOOD. All Rights Reserved.</p>
+        <div class="footer-logo">
+            <img src="1.JPG" alt="Bloom Mood Logo">
+        </div>
+        <p>&copy; 2026 Bloom Mood by Zhenka. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "grid"; 
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 </body>
 </html>
