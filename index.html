@@ -3,530 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloom Mood by Zhenka | Styling Studio</title>
+    <title>Bloom Mood Styling Studio - Price List</title>
     <style>
-        /* LUXURY ԲՐԵՆԴԱՅԻՆ ԳՈՒՅՆԵՐ */
-        :root {
-            --bg-color: #F7F4EE;      
-            --text-main: #4A3E3D;     
-            --accent-gold: #C5A880;   
-            --dusty-pink: #D19A92;    
-            --white: #ffffff;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            letter-spacing: 0.5px;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.7;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 8%;
-            background-color: rgba(247, 244, 238, 0.95);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(197, 168, 128, 0.2);
-        }
-
-        .header-logo img {
-            height: 50px; 
-            display: block;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-main);
-            font-size: 13px;
-            text-transform: uppercase;
-            margin-left: 25px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--accent-gold);
-        }
-
-        .hero {
-            padding: 80px 8%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            min-height: 80vh;
-        }
-
-        .hero-text {
-            flex: 1;
-            padding-right: 50px;
-        }
-
-        .hero-text h2 {
-            font-size: 42px;
-            font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero-text p {
-            font-size: 17px;
-            margin-bottom: 35px;
-            color: #6E605F;
-        }
-
-        .hero-image-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .hero-image-container .main-salon-img {
-            width: 100%;
-            max-width: 480px;
-            border-radius: 200px 200px 0 0; 
-            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
-            border: 12px solid var(--white);
-            z-index: 2;
-        }
-
-        .btn-main {
-            display: inline-block;
-            padding: 16px 40px;
-            background-color: var(--text-main);
-            color: var(--white);
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 13px;
-            letter-spacing: 2px;
-            border: 1px solid var(--text-main);
-            transition: all 0.3s ease;
-            font-weight: bold;
-        }
-
-        .btn-main:hover {
-            background-color: transparent;
-            color: var(--text-main);
-        }
-
-        .services-section {
-            padding: 100px 8%;
-            background-color: var(--white);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-bottom: 40px;
-        }
-
-        .tabs-container {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 60px;
-            flex-wrap: wrap;
-        }
-
-        .tab-btn {
-            padding: 12px 22px;
-            background: none;
-            border: 1px solid rgba(197, 168, 128, 0.3);
-            color: var(--text-main);
-            cursor: pointer;
-            text-transform: uppercase;
-            font-size: 12px;
-            letter-spacing: 1px;
-            transition: all 0.3s;
-            font-weight: 500;
-        }
-
-        .tab-btn.active, .tab-btn:hover {
-            background-color: var(--accent-gold);
-            color: var(--white);
-            border-color: var(--accent-gold);
-        }
-
-        .services-grid-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .tab-content {
-            display: none;
-            width: 100%;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        .service-category-title {
-            font-size: 17px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            color: var(--accent-gold);
-            border-bottom: 1px solid rgba(197, 168, 128, 0.2);
-            padding-bottom: 5px;
-            font-weight: 600;
-        }
-
-        .service-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 14px;
-            padding-bottom: 6px;
-            border-bottom: 1px dashed rgba(197, 168, 128, 0.25);
-        }
-
-        .service-name {
-            font-size: 14.5px;
-            font-weight: 500;
-        }
-
-        .service-price {
-            font-size: 14.5px;
-            color: var(--text-main);
-            font-weight: bold;
-            white-space: nowrap;
-            margin-left: 10px;
-        }
-
-        .courses-section {
-            padding: 100px 8%;
-            background-color: var(--bg-color);
-        }
-
-        .courses-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .course-card {
-            background-color: var(--white);
-            padding: 35px;
-            border-top: 4px solid var(--dusty-pink);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.03);
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .course-book-image {
-            text-align: center;
-            margin-bottom: 20px;
-            min-height: 1px;
-        }
-
-        .course-book-image img {
-            width: 100%;
-            max-width: 180px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            border-radius: 4px;
-        }
-
-        .course-info h3 {
-            font-size: 19px;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            letter-spacing: 1.5px;
-        }
-
-        .course-info p {
-            font-size: 14px;
-            color: #6E605F;
-            margin-bottom: 25px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f7f3ee;
+            color: #3a3530;
             line-height: 1.6;
         }
 
-        footer {
-            background-color: var(--text-main);
-            color: var(--bg-color);
+        /* PDF էջերի կարգավորում տպելու համար */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            margin: 10mm auto;
+            background: #f7f3ee;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            position: relative;
+            page-break-after: always;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media print {
+            body { background: #f7f3ee; }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+        }
+
+        /* Հեդեր և Լոգո (Մեծացված և թափանցիկ ֆոնով) */
+        .header {
             text-align: center;
-            padding: 60px 20px;
-            font-size: 13px;
-            letter-spacing: 2px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .logo-wrapper {
+            margin-bottom: 15px;
+        }
+
+        .logo-wrapper img {
+            width: 140px; /* Մեծացված չափս */
+            height: auto;
+            /* mix-blend-mode-ը ջնջում է սպիտակ/բաց քառակուսի ֆոնը */
+            mix-blend-mode: multiply; 
+            display: inline-block;
+        }
+
+        .brand-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            letter-spacing: 4px;
             text-transform: uppercase;
+            color: #2b2622;
         }
 
-        .footer-logo img {
-            height: 60px;
+        .brand-subtitle {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #8c8175;
+            margin-top: 5px;
+        }
+
+        /* Բաժինների ոճը */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-style: italic;
+            color: #61564d;
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e1dad0;
+            text-transform: capitalize;
+        }
+
+        .subsection-title {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8c8175;
+            margin: 15px 0 10px 0;
+        }
+
+        /* Գնացուցակի Աղյուսակներ */
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
             margin-bottom: 20px;
-            opacity: 0.9;
         }
 
-        @media (max-width: 1024px) {
-            .courses-grid { grid-template-columns: 1fr 1fr; }
+        .price-table tr {
+            border-bottom: 1px dashed #e1dad0;
         }
 
-        @media (max-width: 768px) {
-            header { flex-direction: column; gap: 15px; }
-            .hero { flex-direction: column; text-align: center; }
-            .hero-text { padding-right: 0; margin-bottom: 40px; }
-            .courses-grid { grid-template-columns: 1fr; }
+        .price-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .price-table td {
+            padding: 12px 0;
+            font-size: 14px;
+        }
+
+        .service-name {
+            font-weight: 400;
+            color: #3a3530;
+            padding-right: 15px;
+        }
+
+        .service-details {
+            font-size: 12px;
+            color: #7a7065;
+            display: block;
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        .service-price {
+            text-align: right;
+            font-weight: 500;
+            white-space: nowrap;
+            color: #2b2622;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Ֆուտեր */
+        .footer {
+            margin-top: auto;
+            text-align: center;
+            font-size: 11px;
+            color: #a89e92;
+            letter-spacing: 1px;
+            padding-top: 30px;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="header-logo">
-            <img src="1.JPG" alt="Bloom Mood Logo">
-        </div>
-        <nav>
-            <a href="#about">Սրահի Մասին</a>
-            <a href="#services">Գնացուցակ</a>
-            <a href="#courses">Դասընթացներ</a>
-        </nav>
-    </header>
-
-    <section class="hero" id="about">
-        <div class="hero-text">
-            <h2>Ընդգծի՛ր քո բնական գեղեցկությունը</h2>
-            <p>Բարի գալուստ Bloom Mood Styling Studio: Մեզ մոտ ստեղծված է կատարյալ հարմարավետություն, շքեղ մթնոլորտ և պրոֆեսիոնալ մոտեցում՝ Ձեր խնամքն ու անդիմադրելի տեսքը ապահովելու համար:</p>
-            <a href="register.html" class="btn-main">Ամրագրել Օնլայն</a>
-        </div>
-        <div class="hero-image-container">
-            <img src="2.JPG" class="main-salon-img" alt="Bloom Mood Studio">
-        </div>
-    </section>
-
-    <section class="services-section" id="services">
-        <h2 class="section-title">Ծառայություններ և Արժեքներ</h2>
-
-        <div class="tabs-container">
-            <button class="tab-btn active" onclick="openTab(event, 'makeup-hair')">Դիմահարդարում & Վարսահարդարում</button>
-            <button class="tab-btn" onclick="openTab(event, 'nails')">Մատնահարդարում & Ոտնահարդարում</button>
-            <button class="tab-btn" onclick="openTab(event, 'cosmetology-inject')">Ներարկումային Կոսմետոլոգիա</button>
-            <button class="tab-btn" onclick="openTab(event, 'cosmetology-non-inject')">Ոչ Ներարկումային Կոսմետոլոգիա</button>
-            <button class="tab-btn" onclick="openTab(event, 'brows-lashes')">Հոնքեր, Թարթիչներ & Պերմանենտ</button>
-            <button class="tab-btn" onclick="openTab(event, 'massage-depil')">Մերսում & Մազահեռացում</button>
+    <div class="page">
+        <div class="header">
+            <div class="logo-wrapper">
+                <img src="logo.png" alt="Bloom Mood Logo">
+            </div>
+            <div class="brand-title">Bloom Mood</div>
+            <div class="brand-subtitle">by Zhenka</div>
         </div>
 
-        <div class="services-grid-wrapper">
-            
-            <div id="makeup-hair" class="tab-content active">
-                <div class="service-items-list">
-                    <div class="service-category-title">Դիմահարդարում</div>
-                    <div class="service-item"><span class="service-name">Ցերեկային դիմահարդարում</span><span class="service-price">8,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Երեկոյան դիմահարդարում</span><span class="service-price">10,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Հարսանեկան դիմահարդարում</span><span class="service-price">20,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Դեկոլտեի մշակում</span><span class="service-price">5,000 AMD</span></div>
-                    
-                    <div class="service-category-title" style="margin-top:25px;">Վարսահարդարում</div>
-                    <div class="service-item"><span class="service-name">Հարսանեկան սանրվածք</span><span class="service-price">10,000 / 20,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Երեկոյան սանրվածք</span><span class="service-price">5,000 / 18,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Հարդարում</span><span class="service-price">2,000 / 5,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Հարդարում (խառը)</span><span class="service-price">3,000 / 5,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Հարդարում (շիպցի)</span><span class="service-price">4,000 / 10,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Հյուսքեր</span><span class="service-price">2,000 / 10,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Ներկում</span><span class="service-price">4,000 / 8,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Շերտաներկում</span><span class="service-price">25,000 / 30,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Կտրվածք</span><span class="service-price">2,000 AMD</span></div>
-                </div>
-            </div>
+        <div class="section-title">Permanent Make Up</div>
+        <table class="price-table">
+            <tr>
+                <td class="service-name">Հոնքերի փոշեդրում</td>
+                <td class="service-price">25.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Շուրթերի փոշեդրում</td>
+                <td class="service-price">25.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Շրթագիծ</td>
+                <td class="service-price">25.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Միջթարթիչ</td>
+                <td class="service-price">15.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Կորեկցիա</td>
+                <td class="service-price">10.000 AMD</td>
+            </tr>
+        </table>
 
-            <div id="nails" class="tab-content">
-                <div class="service-items-list">
-                    <div class="service-category-title">Մատնահարդարում</div>
-                    <div class="service-item"><span class="service-name">Մատնահարդարում</span><span class="service-price">1,500 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Մատնահարդարում + գելլաք</span><span class="service-price">4,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Մոդելավորում (լիցք)</span><span class="service-price">7,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Ֆրենչ</span><span class="service-price">4,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Օմբրե</span><span class="service-price">4,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Մեկ կոտրված եղունգի վերականգնում</span><span class="service-price">+500 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Սթիքերներ, սկայդեր, փայլիկներ</span><span class="service-price">Անվճար</span></div>
-                    
-                    <div class="service-category-title" style="margin-top:25px;">Ոտնահարդարում</div>
-                    <div class="service-item"><span class="service-name">Ոտնահարդարում թաթային</span><span class="service-price">2,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Ոտնահարդարում կրունկներով</span><span class="service-price">5,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Ոտնահարդարում թաթային + գելլաք</span><span class="service-price">5,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Ոտնահարդարում կրունկներով + գելլաք</span><span class="service-price">7,000 AMD</span></div>
-                </div>
-            </div>
+        <div class="section-title">Դիմահարդարում</div>
+        <table class="price-table">
+            <tr>
+                <td class="service-name">Ցերեկային դիմահարդարում</td>
+                <td class="service-price">8.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Երեկոյան դիմահարդարում</td>
+                <td class="service-price">10.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Հարսանեկան դիմահարդարում</td>
+                <td class="service-price">20.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Դեկոլտեի մշակում</td>
+                <td class="service-price">5.000 AMD</td>
+            </tr>
+        </table>
 
-            <div id="cosmetology-inject" class="tab-content">
-                <div class="service-items-list">
-                    <div class="service-category-title">Ներարկումներ & Բոտոքս</div>
-                    <div class="service-item"><span class="service-name">Ֆիլերներ</span><span class="service-price">Գնացուցակով</span></div>
-                    <div class="service-item"><span class="service-name">Բոտուլինաթերապիա (1 հատված)</span><span class="service-price">17,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Բոտուլինաթերապիա (2 հատված)</span><span class="service-price">30,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Բոտուլինաթերապիա (3 հատված)</span><span class="service-price">40,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Մեզոբոտոքս</span><span class="service-price">15,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Գերքրտնարտադրություն</span><span class="service-price">30,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Բիորևիտալիզացիա 1մլ</span><span class="service-price">30,000 / 25,000 / 15,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Պլազմոթերապիա (2 սրվակ)</span><span class="service-price">15,000 AMD</span></div>
-                    
-                    <div class="service-category-title" style="margin-top:25px;">Մեզոթերապիա & Լիպոլիտիկ</div>
-                    <div class="service-item"><span class="service-name">Դեմք 1մլ</span><span class="service-price">10,000 / 15,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Գլխամաշկ 1մլ</span><span class="service-price">6,000 / 8,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Լիպոլիտիկներ 1մլ</span><span class="service-price">6,000 / 8,000 AMD</span></div>
-                </div>
-            </div>
+        <div class="footer">Bloom Mood • Price List</div>
+    </div>
 
-            <div id="cosmetology-non-inject" class="tab-content">
-                <div class="service-items-list">
-                    <div class="service-category-title">Ապարատային & Խնամք</div>
-                    <div class="service-item"><span class="service-name">Քիմիական պիլինգներ</span><span class="service-price">15,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Ֆրակցիոն մեզոթերապիա (Դեմք)</span><span class="service-price">12,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Ֆրակցիոն մեզոթերապիա (Գլխամաշկ)</span><span class="service-price">13,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Կարբոքսի թերապիա</span><span class="service-price">12,000 / 15,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Ուլտրաձայնային մաքրում</span><span class="service-price">10,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Պապիլոմաների, գորտնուկների, միլիումների հեռացում</span><span class="service-price">10,000 / 12,000 / 15,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Կոպերի ոչ վիրահատական բլեֆարոպլաստիկա</span><span class="service-price">15,000 / 25,000 AMD</span></div>
 
-                    <div class="service-category-title" style="margin-top:25px;">Պրեմիում Դիմակներ</div>
-                    <div class="service-item"><span class="service-name">Ալգինատ (վերականգնող, ծակոտիները փակող)</span><span class="service-price">6,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Ոսկու դիմակ (երիտասարդեցնող, հիալուրոնաթթու)</span><span class="service-price">6,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Պղինձ (Թարմեցնող, վերականգնող դիմակ)</span><span class="service-price">5,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Ձկնկիթ (Լիֆտինգ, առանց ներարկման ձգող)</span><span class="service-price">8,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Կավ յուղոտ մաշկի (կարգավորում է ճարպային բալանսը)</span><span class="service-price">3,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Քունջութի դիմակ չոր մաշկի համար (խորը խոնավեցում)</span><span class="service-price">3,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Մաշկը հանգստացնող տարբեր դիմակներ</span><span class="service-price">3,000 AMD</span></div>
-                </div>
-            </div>
-
-            <div id="brows-lashes" class="tab-content">
-                <div class="service-items-list">
-                    <div class="service-category-title">Permanent Make Up</div>
-                    <div class="service-item"><span class="service-name">Հոնքերի փոշեդրում</span><span class="service-price">25,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Շուրթերի փոշեդրում</span><span class="service-price">25,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Աչքերի սլաքներ (Permanent)</span><span class="service-price">25,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Միջթարթիչային հատված</span><span class="service-price">15,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Կորեկցիա</span><span class="service-price">10,000 AMD</span></div>
-
-                    <div class="service-category-title" style="margin-top:25px;">Թարթիչների Երկարեցում</div>
-                    <div class="service-item"><span class="service-name">Անկյունային լիցք</span><span class="service-price">4,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">2D Լիցք</span><span class="service-price">6,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">3D Լիցք</span><span class="service-price">7,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">2D - 3D Միքս</span><span class="service-price">8,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Mega Volume</span><span class="service-price">10,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Թարթիչների հեռացում</span><span class="service-price">2,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">M-L Կորություն / Շագանակագույն թարթիչներ</span><span class="service-price">+1,000 AMD</span></div>
-
-                    <div class="service-category-title" style="margin-top:25px;">Երկարատև Հարդարում (Լամինացիա)</div>
-                    <div class="service-item"><span class="service-name">Հոնքերի լամինացիա</span><span class="service-price">7,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Թարթիչների լամինացիա</span><span class="service-price">7,000 AMD</span></div>
-                </div>
-            </div>
-
-            <div id="massage-depil" class="tab-content">
-                <div class="service-items-list">
-                    <div class="service-category-title">Մերսումներ (Classic & Therapy)</div>
-                    <div class="service-item"><span class="service-name">Ամբողջ մարմնի դասական մերսում (1 - 1.5 ժամ)</span><span class="service-price">15,000 / 20,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Մեջքի հատված</span><span class="service-price">5,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Ոտքեր (25-30 րոպե)</span><span class="service-price">6,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Մեջք և ձեռքեր (45 րոպե)</span><span class="service-price">8,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Որովայն (15-25 րոպե)</span><span class="service-price">4,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Բուժական մերսում (10 այց, 25-30 րոպե)</span><span class="service-price">50,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Ողնաշարի կոմպլեքս բուժում</span><span class="service-price">100,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Կետային մերսում (Շիացու) (15-20 րոպե)</span><span class="service-price">5,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Բանկաներ</span><span class="service-price">5,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Միոստիմուլացիա (Տոկեր, 15-20 րոպե)</span><span class="service-price">5,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Հակացելյուլիտային (Ոտքերի հատվածում)</span><span class="service-price">8,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Հակացելյուլիտային (Որովայն)</span><span class="service-price">5,000 AMD</span></div>
-
-                    <div class="service-category-title" style="margin-top:25px;">Մազահեռացում (Լազեր / Էլեկտրո)</div>
-                    <div class="service-item"><span class="service-name">Էլեկտրոէպիլյացիա (1 ժամը)</span><span class="service-price">6,000 AMD</span></div>
-            
-                    <div class="service-item"><span class="service-name">Լազերային մազահեռացում (Ամբողջ մարմին)</span><span class="service-price">15,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Լազերային մազահեռացում (Դեմք)</span><span class="service-price">3,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Լազերային մազահեռացում (Թևատակեր)</span><span class="service-price">2,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Լազերային մազահեռացում (Ձեռքեր ամբողջական)</span><span class="service-price">4,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Լազերային մազահեռացում (Ոտքեր ամբողջական)</span><span class="service-price">6,000 AMD</span></div>
-                    <div class="service-item"><span class="service-name">Լազերային մազահեռացում (Խորը բիկինի)</span><span class="service-price">4,000 AMD</span></div>iv>
-                </div>
-            </div>
-
+    <div class="page">
+        <div class="header">
+            <div class="brand-title">Bloom Mood</div>
         </div>
 
-        <div style="text-align: center; margin-top: 60px;">
-            <a href="register.html" class="btn-main">Ընտրել Ծառայություն և Գրանցվել</a>
+        <div class="section-title">Թարթիչների երկարեցում</div>
+        <table class="price-table">
+            <tr>
+                <td class="service-name">Անկյունային լիցք</td>
+                <td class="service-price">4.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">2D Լիցք</td>
+                <td class="service-price">6.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">3D Լիցք</td>
+                <td class="service-price">7.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">2D - 3D միքս</td>
+                <td class="service-price">8.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Mega volume</td>
+                <td class="service-price">10.000 AMD</td>
+            </tr>
+        </table>
+
+        <div class="subsection-title">Հավելյալ ծառայություններ</div>
+        <table class="price-table">
+            <tr>
+                <td class="service-name">Հեռացում</td>
+                <td class="service-price">2.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">M - L կորություն</td>
+                <td class="service-price">1.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Շագանակագույն թարթիչներ</td>
+                <td class="service-price">1.000 AMD</td>
+            </tr>
+        </table>
+
+        <div class="section-title">Հոնքերի և թարթիչների երկարատև հարդարում</div>
+        <table class="price-table">
+            <tr>
+                <td class="service-name">Հոնքերի լամինացիա</td>
+                <td class="service-price">7.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Թարթիչների լամինացիա</td>
+                <td class="service-price">7.000 AMD</td>
+            </tr>
+        </table>
+
+        <div class="footer">Bloom Mood • Price List</div>
+    </div>
+
+
+    <div class="page">
+        <div class="header">
+            <div class="brand-title">Bloom Mood</div>
         </div>
-    </section>
 
-    <section class="courses-section" id="courses">
-        <h2 class="section-title" style="margin-bottom: 60px;">Ուսումնական Դասընթացներ</h2>
-        <div class="courses-grid">
-            
-            <div class="course-card">
-                <div class="course-book-image">
-                    <img src="11.jpg" alt="Makeup Course">
-                </div>
-                <div class="course-info">
-                    <h3>Basic Makeup Course</h3>
-                    <p>Տիրապետի՛ր դիմահարդարման, հոնքերի ձևավորման և ստայլինգի գաղտնիքներին: Դասընթացները ներառում են մանրամասն տեսական բազա և գործնական փուլեր:</p>
-                    <a href="register.html" class="btn-main" style="background-color: var(--dusty-pink); border-color: var(--dusty-pink); width: 100%; text-align: center;">Գրանցվել</a>
-                </div>
-            </div>
+        <div class="section-title">Մազերի Հարդարում</div>
+        <table class="price-table">
+            <tr>
+                <td class="service-name">Հարսանեկան սանրվածք</td>
+                <td class="service-price">8.000 - 18.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Երեկոյան սանրվածք</td>
+                <td class="service-price">5.000 - 18.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Հարդարում</td>
+                <td class="service-price">2.000 - 3.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Հարդարում (խառը)</td>
+                <td class="service-price">3.000 - 4.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Հարդարում (շիպցի)</td>
+                <td class="service-price">3.000 - 8.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Հյուսքեր</td>
+                <td class="service-price">2.000 - 10.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Ներկում</td>
+                <td class="service-price">4.000 - 8.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Շերտաներկում</td>
+                <td class="service-price">25.000 - 30.000 AMD</td>
+            </tr>
+            <tr>
+                <td class="service-name">Կտրվածք</td>
+                <td class="service-price">2.000 AMD</td>
+            </tr>
+        </table>
 
-            <div class="course-card">
-                <div class="course-book-image">
-                    </div>
-                <div class="course-info">
-                    <h3>Hair Styling Course</h3>
-                    <p>Պրոֆեսիոնալ վարսահարդարման և սանրվածքների դասընթաց սկսնակների համար: Երեկոյան, հարսանեկան ոճերի կերտում և գործնական աշխատանք մոդելների հետ:</p>
-                    <a href="register.html" class="btn-main" style="background-color: var(--accent-gold); border-color: var(--accent-gold); width: 100%; text-align: center;">Գրանցվել</a>
-                </div>
-            </div>
+        <div class="section-title">Մազահեռացում </div>
+        <table class="price-table">
+            <tr><td class="service-name">Դեմք / Ճակատ / Բակեր</td><td class="service-price">1.500 - 3.000 AMD</td></tr>
+            <tr><td class="service-name">Շրթունքի վերին հատված / Կզակ</td><td class="service-price">1.000 - 1.500 AMD</td></tr>
+            <tr><td class="service-name">Թևատակեր</td><td class="service-price">2.000 AMD</td></tr>
+            <tr><td class="service-name">Ձեռքեր</td><td class="service-price">4.000 - 6.000 AMD</td></tr>
+            <tr><td class="service-name">Ոտքեր</td><td class="service-price">6.000 - 8.000 AMD</td></tr>
+            <tr><td class="service-name">Մեջք / Որովայն</td><td class="service-price">3.000 - 6.000 AMD</td></tr>
+            <tr><td class="service-name">Բիկինի</td><td class="service-price">4.000 - 6.000 AMD</td></tr>
+            <tr><td class="service-name">Ամբողջ մարմին</td><td class="service-price">13.000 AMD</td></tr>
+        </table>
 
-            <div class="course-card">
-                <div class="course-book-image">
-                    </div>
-                <div class="course-info">
-                    <h3>Nail Art & Tech Course</h3>
-                    <p>Մատնահարդարման ժամանակակից տեխնիկաներ՝ ապարատային մաքրում, գել-լաքի ճիշտ հարթեցում, լիցք և նորաձև դիզայնների ստեղծում առաջատար նյութերով:</p>
-                    <a href="register.html" class="btn-main" style="background-color: var(--text-main); border-color: var(--text-main); width: 100%; text-align: center;">Գրանցվել</a>
-                </div>
-            </div>
+        <div class="footer">Bloom Mood • Price List</div>
+    </div>
 
+
+    <div class="page">
+        <div class="header">
+            <div class="brand-title">Bloom Mood</div>
         </div>
-    </section>
 
-    <footer>
-        <div class="footer-logo">
-            <img src="1.JPG" alt="Bloom Mood Logo">
+        <div class="section-title">Մատնահարդարում & Ոտնահարդարում</div>
+        <table class="price-table">
+            <tr><td class="service-name">Մատնահարդարում</td><td class="service-price">1.000 AMD</td></tr>
+            <tr><td class="service-name">Մատնահարդարում + Գելլաք</td><td class="service-price">3.000 AMD</td></tr>
+            <tr><td class="service-name">Մոդելավորում (Լիցք)</td><td class="service-price">7.000 AMD</td></tr>
+            <tr><td class="service-name">Ֆրենչ / Օմբրե</td><td class="service-price">4.000 AMD</td></tr>
+            <tr><td class="service-name">Ոտնահարդարում (Թաթային)</td><td class="service-price">2.000 AMD</td></tr>
+            <tr><td class="service-name">Ոտնահարդարում (Կրունկներով)</td><td class="service-price">5.000 AMD</td></tr>
+            <tr><td class="service-name">Ոտնահարդարում կրունկներով + Գելլաք</td><td class="service-price">7.000 AMD</td></tr>
+        </table>
+
+        <div class="section-title">Ներարկումային Կոսմետոլոգիա</div>
+        <table class="price-table">
+            <tr>
+                <td class="service-name">Բոտուլինաթերապիա <span class="service-details">1 հատված / 2 հատված / 3 հատված</span></td>
+                <td class="service-price">17.000 / 30.000 / 40.000 AMD</td>
+            </tr>
+            <tr><td class="service-name">Մեզոբոտոքս</td><td class="service-price">15.000 AMD</td></tr>
+            <tr><td class="service-name">Գերքրտնարտադրություն</td><td class="service-price">30.000 AMD</td></tr>
+            <tr><td class="service-name">Բիորևիտալիզացիա (1մլ)</td><td class="service-price">15.000 - 30.000 AMD</td></tr>
+            <tr><td class="service-name">Պլազմոթերապիա (2 սրվակ)</td><td class="service-price">15.000 AMD</td></tr>
+            <tr><td class="service-name">Մեզոթերապիա <span class="service-details">Դեմք / Գլխամաշկ / Լիպոլիտիկներ (1մլ)</span></td>
+                <td class="service-price">6.000 - 15.000 AMD</td>
+            </tr>
+        </table>
+
+        <div class="footer">Bloom Mood • Price List</div>
+    </div>
+
+
+    <div class="page">
+        <div class="header">
+            <div class="brand-title">Bloom Mood</div>
         </div>
-        <p>&copy; 2026 Bloom Mood by Zhenka. All Rights Reserved.</p>
-    </footer>
 
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-            document.getElementById(tabName).style.display = "block"; 
-            evt.currentTarget.classList.add("active");
-        }
-    </script>
+        <div class="section-title">Ոչ Ներարկումային Կոսմետոլոգիա & Դիմակներ</div>
+        <table class="price-table">
+            <tr><td class="service-name">Քիմիական պիլինգներ / Կարբոքսի թերապիա</td><td class="service-price">12.000 - 15.000 AMD</td></tr>
+            <tr><td class="service-name">Ֆրակցիոն մեզոթերապիա (Դեմք / Գլխամաշկ)</td><td class="service-price">12.000 / 13.000 AMD</td></tr>
+            <tr><td class="service-name">Ուլտրաձայնային մաքրում</td><td class="service-price">10.000 AMD</td></tr>
+            <tr><td class="service-name">Ալգինատե դիմակ <span class="service-details">վերականգնող, ծակոտիները փակող, հարթեցնող</span></td><td class="service-price">6.000 AMD</td></tr>
+            <tr><td class="service-name">Ոսկու դիմակ <span class="service-details">կոլոիդ ոսկու փոշի, հիալուրոնաթթու, պեպտիդներ</span></td><td class="service-price">6.000 AMD</td></tr>
+            <tr><td class="service-name">Ձկնկիթի դիմակ <span class="service-details">լիֆտինգ ազդեցություն առանց ներարկման</span></td><td class="service-price">8.000 AMD</td></tr>
+            <tr><td class="service-name">Կավի / Քունջութի / Հանգստացնող դիմակներ</td><td class="service-price">3.000 AMD</td></tr>
+        </table>
+
+        <div class="section-title">Մերսում & Միոստիմուլացիա</div>
+        <table class="price-table">
+            <tr><td class="service-name">Ամբողջ մարմնի դասական մերսում <span class="service-details">տևողությունը՝ 1 - 1.5 ժամ</span></td><td class="service-price">15.000 - 20.000 AMD</td></tr>
+            <tr><td class="service-name">Մեջքի հատված / Մեջք և ձեռքեր</td><td class="service-price">5.000 / 8.000 AMD</td></tr>
+            <tr><td class="service-name">Բուժական մերսում <span class="service-details">10 այց</span></td><td class="service-price">50.000 AMD</td></tr>
+            <tr><td class="service-name">Ողնաշարի կոմպլեքս բուժում</td><td class="service-price">100.000 AMD</td></tr>
+            <tr><td class="service-name">Կետային մերսում (Շիացու) / Բանկաներ</td><td class="service-price">5.000 AMD</td></tr>
+            <tr><td class="service-name">Միոստիմուլացիա (տոկեր)</td><td class="service-price">5.000 AMD</td></tr>
+            <tr><td class="service-name">Հակացելյուլիտային մերսում <span class="service-details">Ոտքեր / Որովայն</span></td><td class="service-price">8.000 / 5.000 AMD</td></tr>
+        </table>
+
+        <div class="footer">Bloom Mood • Price List</div>
+    </div>
+
 </body>
 </html>
