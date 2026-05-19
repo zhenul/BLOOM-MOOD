@@ -32,33 +32,26 @@
             line-height: 1.7;
         }
 
-        /* ՇՔԵՂ ՏԵՔՍՏԱՅԻՆ ԼՈԳՈՅԻ ՈՃԸ */
-        .brand-logo-text {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 26px;
-            font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            color: var(--text-main);
-            text-decoration: none;
-            display: inline-block;
-            transition: color 0.3s;
+        /* ՇՔԵՂ ԿԼՈՐԱՑՎԱԾ ԼՈԳՈՅԻ ՈՃԸ */
+        .brand-logo-img {
+            width: 75px; /* Հարմարեցված չափս հեդերի համար */
+            height: 75px;
+            object-fit: cover;
+            border-radius: 50%; /* Քառակուսին դարձնում է նուրբ կլոր */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Թեթև ստվեր շքեղության համար */
+            transition: transform 0.3s ease;
+            display: block;
         }
 
-        .brand-logo-text span {
-            font-size: 12px;
-            display: block;
-            letter-spacing: 2px;
-            text-align: center;
-            margin-top: -2px;
-            opacity: 0.8;
+        .brand-logo-img:hover {
+            transform: scale(1.05);
         }
 
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 8%;
+            padding: 15px 8%;
             /* Թափանցիկ հեդեր՝ բլյուր էֆեկտով */
             background-color: rgba(247, 244, 238, 0.75);
             backdrop-filter: blur(10px);
@@ -297,7 +290,10 @@
             background-color: rgba(74, 62, 61, 0.9);
             backdrop-filter: blur(8px);
             color: #F7F4EE;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             padding: 60px 20px;
             font-size: 13px;
             letter-spacing: 2px;
@@ -306,11 +302,12 @@
         }
 
         .footer-logo {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        .footer-logo .brand-logo-text {
-            color: #F7F4EE;
+        .footer-logo .brand-logo-img {
+            width: 90px; /* Ֆուտերում մի փոքր ավելի մեծ լոգո */
+            height: 90px;
         }
 
         @media (max-width: 1024px) {
@@ -318,7 +315,7 @@
         }
 
         @media (max-width: 768px) {
-            header { flex-direction: column; gap: 20px; }
+            header { flex-direction: column; gap: 20px; padding: 20px 8%; }
             .hero { flex-direction: column; text-align: center; }
             .hero-text { padding-right: 0; margin-bottom: 40px; }
             .courses-grid { grid-template-columns: 1fr; }
@@ -329,7 +326,7 @@
 
     <header>
         <div class="header-logo">
-            <a href="#" class="brand-logo-text">BLOOM MOOD<span>by Zhenka</span></a>
+            <a href="#"><img src="BLOOM MOOD-02.JPG" class="brand-logo-img" alt="Bloom Mood Logo"></a>
         </div>
         <nav>
             <a href="#about">Սրահի Մասին</a>
@@ -514,7 +511,7 @@
                 </div>
                 <div class="course-info">
                     <h3>Basic Makeup Course</h3>
-                    <p>Տիրապետի՛ր դիմահարդարման, հոնքերի ձևավորման և ստայլինգի գաղտնիքներին: Դասընթացները ներառում են մանրամասն տեսական բազա և գործնական փուլեր:</p>
+                    <p>Տիրապետի՛ր դիմահարդարման, հոնքերի ձևավորման և ստայլինգի գաղտնիքներին: Դասընթացները ներառում են մանրամասն տեսական բազա և գործնական փուլեր.</p>
                     <a href="register.html" class="btn-main" style="background-color: var(--dusty-pink); border-color: var(--dusty-pink); width: 100%; text-align: center;">Գրանցվել</a>
                 </div>
             </div>
@@ -524,7 +521,7 @@
                     </div>
                 <div class="course-info">
                     <h3>Hair Styling Course</h3>
-                    <p>Պրոֆեսիոնալ վարսահարդարման և սանրվածքների դասընթաց սկսնակների համար: Երեկոյան, հարսանեկան ոճերի կերտում և գործնական աշխատանք մոդելների հետ:</p>
+                    <p>Պրոֆեսիոնալ վարսահարդարման և սանրվածքների դասընթաց սկսնակների համար: Երեկոյան, հարսանեկան ոճերի կերտում և գործնական աշխատանք մոդելների հետ.</p>
                     <a href="register.html" class="btn-main" style="background-color: var(--accent-gold); border-color: var(--accent-gold); width: 100%; text-align: center;">Գրանցվել</a>
                 </div>
             </div>
@@ -534,7 +531,7 @@
                     </div>
                 <div class="course-info">
                     <h3>Nail Art & Tech Course</h3>
-                    <p>Մատնահարդարման ժամանակակից տեխնիկաներ՝ ապարատային մաքրում, գել-լաքի ճիշտ հարթեցում, լիցք և նորաձև դիզայնների ստեղծում առաջատար նյութերով:</p>
+                    <p>Մատնահարդարման ժամանակակից տեխնիկաներ՝ ապարատային մաքրում, գել-լաքի ճիշտ հարթեցում, լիցք և նորաձև դիզայնների ստեղծում առաջատար նյութերով.</p>
                     <a href="register.html" class="btn-main" style="background-color: var(--text-main); border-color: var(--text-main); width: 100%; text-align: center;">Գրանցվել</a>
                 </div>
             </div>
@@ -544,7 +541,7 @@
 
     <footer>
         <div class="footer-logo">
-            <a href="#" class="brand-logo-text">BLOOM MOOD<span>by Zhenka</span></a>
+            <a href="#"><img src="BLOOM MOOD-02.JPG" class="brand-logo-img" alt="Bloom Mood Logo"></a>
         </div>
         <p>&copy; 2026 Bloom Mood by Zhenka. All Rights Reserved.</p>
     </footer>
